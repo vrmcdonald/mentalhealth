@@ -11,17 +11,24 @@ var json = {
                     name: "location",
                     title: "Do you live in the United States?",
                     choices: ["Yes", "No"],
+                }, {
+                  type: "checkbox",
+                  name: "commout",
+                  title: "Which medium of communication is the most helpful to you? Please check all that apply.",
+                  visibleIf: "{location}='No'",
+                  choicesOrder: "random",
+                  choices: ["Hotlines", "Online messaging"]
                 }
             ]
         }, {
             questions: [
                 {
                     type: "checkbox",
-                    name: "commout",
+                    name: "commout2",
                     title: "Which medium of communication is the most helpful to you? Please check all that apply.",
-                    visibileIF: "{location}='No'",
+                    visibleIf: "{location}='No'",
                     choicesOrder: "random",
-                    choices: ["Hotlines", "Online messaging"]
+                    choices: ["Hotlines", "Text messaging", "Online messaging"]
                 }
             ]
         }, {
@@ -46,7 +53,7 @@ var json = {
             ]
         }
     ],
-    
+
     completedHtml: "<p> Hopefully, this guide was helpful for you. If not, this is by no means a comprehensive list. Please don’t hesitate to reach out to those around you, whether they’re loved ones or trained professionals. </p> <p> You deserve to be heard. </p>"
 };
 
