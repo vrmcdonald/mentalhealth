@@ -40,8 +40,7 @@ body {
 #container {
   max-width: 100%;
   padding: 0px;
-  border-width: 20px;
-  border-color: #fff;
+  border: 3px dashed #fff;
   text-shadow: none;
 }
 
@@ -51,31 +50,33 @@ body {
 
 #gagues {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 100%;
 }
 
 figure {
   text-align: center;
-  max-width: 100%;
   text-shadow: #333 1px 1px;
+  max-width: 200px;
 }
 
-.circle {
-  min-width: 30%;
-  max-width: 100%;
+figcaption {
+  padding-top: 10px;
+}
+
+#infographic {
+  max-width: 100%
 }
 
 #form {
   background: #ff9740;
   padding: 10px 30px 40px 30px;
+  text-shadow: #444 1px 1px;
 }
 
 #survey {
   padding: 0px;
-}
-
-#survey {
-
+  text-shadow: none;
 }
 
 h1 {
@@ -107,10 +108,29 @@ footer {
   font-size: 14px;
   text-align: center;
   margin: 20px 0px 20px 0px;
+  line-height: 10px;
 }
 
-@media screen and (max-width 750px){
+@media screen and (max-width: 700px) {
   .wrapper {
-    margin: 1em;
+    margin: 10px;
+  }
+
+  body {
+    padding: 5px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #gagues {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  footer {
+    line-height: 20px;
   }
 }

@@ -127,7 +127,7 @@ var json = {
             type: "html",
             name: "onlineonly",
             visibleIf: "{comm} contains 'Online messaging'",
-            html: "<ul><li>The National Suicide Hotline’s <a href='https://www.thetrevorproject.org/get-help-now' target='blank'>Lifeline Chat</a> is available 24 hours a day, 7 days a week.</li><li><a href='https://www.imalive.org/' target='blank'>IMAlive.org</a> offers an online crisis chat staffed by trained volunteers.</li><li><a href='https://www.iowacrisischat.org/' target='blank'>The Iowa Crisis Chat</a> offers support in both English and Mandarin every day between 9 a.m. and 2 a.m. central time.</li></ul>",
+            html: "<ul><li>The National Suicide Hotline’s <a href='https://suicidepreventionlifeline.org/chat/' target='blank'>Lifeline Chat</a> is available 24 hours a day, 7 days a week.</li><li><a href='https://www.imalive.org/' target='blank'>IMAlive.org</a> offers an online crisis chat staffed by trained volunteers.</li><li><a href='https://www.iowacrisischat.org/' target='blank'>The Iowa Crisis Chat</a> offers support in both English and Mandarin every day between 9 a.m. and 2 a.m. central time.</li></ul>",
         },{
             type: "checkbox",
             name: "onlineSpecial",

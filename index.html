@@ -43,35 +43,29 @@
 			</section>
 
       <section id="info">
-					<h2>United States Mental Illness Statistics</h2>
-					<p>Click the gauges to cycle through statistics sourced from the <a href="https://www.nami.org/Learn-More/Mental-Health-By-the-Numbers" target="blank">National Alliance on Mental Illness.</a></p>
+					<h2>U.S. Mental Illness Statistics</h2>
+					<p>A sample of statistics found on the <a href="https://www.nami.org/Learn-More/Mental-Health-By-the-Numbers" target="blank">National Alliance on Mental Illness</a> website.</p>
 						<div id="gagues">
-							<div class="circle" id="youth">
 									<figure>
-									<svg id="fillgauge1" width="65%" height="200" onclick="gauge1.update(NewValue());"></svg>
+									<svg class="infographic" id="fillgauge1" width="100%" height="200"></svg>
+									<figcaption>Nearly 60% of adults with a mental illness didn’t receive mental health services in the previous year.</figcaption>
+									</figure>
+
+									<figure>
+									<svg class="infographic" id="fillgauge2" width="100%" height="200"></svg>
 									<figcaption>20% of youth ages 13-18 live with a mental health condition.</figcaption>
 									</figure>
-							</div>
 
-							<div class="circle" id="adults">
 									<figure>
-									<svg id="fillgauge2" width="65%" height="200" onclick="gauge2.update(NewValue());"></svg>
-									<figcaption>1 in 100 (2.4 million) American adults live with schizophrenia.</figcaption>
+									<svg class="infographic" id="fillgauge3" width="100%" height="200"></svg>
+									<figcaption>18.1% (42 million) of American adults live with anxiety disorders.</figcaption>
 									</figure>
 							</div>
-
-							<div class="circle" id="race">
-									<figure>
-									<svg id="fillgauge3" width="65%" height="200" onclick="gauge3.update(NewValue());"></svg>
-									<figcaption>28.3% of Native American/Alaskan Native adults live with a mental health condition.</figcaption>
-									</figure>
-							</div>
-					</div>
 			</section>
 
       <section id="form">
 			<h2>Where to Get Help Now</h2>
-
+			<p>If you’re in crisis, feel unsafe or just need someone to talk to, there’s always someone available to help you. This form will generate links to free resources suited to your needs.</p>
 			<div id="survey">
 		      <div id="surveyElement"></div>
 		      <div id="surveyResult"></div>
@@ -89,47 +83,44 @@
 
 			<script>
 						var config1 = liquidFillGaugeDefaultSettings();
-						config1.circleColor = "#FFF";
+						config1.circleColor = "#fff";
 						config1.textColor = "#fff";
-						config1.waveTextColor = "#FFAAAA";
-						config1.waveColor = "#FFDDDD";
-						config1.circleThickness = 0.2;
-						config1.textVertPosition = 0.2;
+						config1.waveTextColor = "#ff00b7";
+						config1.waveColor = "#0bcff9";
+						config1.circleThickness = 0.15;
+        		config1.circleFillGap = 0.05;
+						config1.textVertPosition = 0.5;
 						config1.waveAnimateTime = 1000;
-						var gauge1 = loadLiquidFillGauge("fillgauge1", 20, config1);
+						var gauge1 = loadLiquidFillGauge("fillgauge1", 60, config1);
 
 
 						var config2 = liquidFillGaugeDefaultSettings();
 						config2.circleColor = "#fff";
-						config2.textColor = "#fff";
-						config2.waveTextColor = "#805615";
-						config2.waveColor = "#FFDDDD";
-						config2.circleThickness = 0.1;
-						config2.circleFillGap = 0.2;
-						config2.textVertPosition = 0.8;
+						config2.textColor = "#ffde00";
+						config2.waveTextColor = "#ffde00";
+						config2.waveColor = "#0bcff9";
+						config2.circleThickness = 0.15;
+        		config2.circleFillGap = 0.05;
+						config2.textVertPosition = 0.5;
 						config2.waveAnimateTime = 2000;
 						config2.waveHeight = 0.3;
 						config2.waveCount = 1;
-						var gauge2= loadLiquidFillGauge("fillgauge2", 1.1, config2);
+						var gauge2= loadLiquidFillGauge("fillgauge2", 20, config2);
 
 						var config3 = liquidFillGaugeDefaultSettings();
 						config3.circleColor = "#fff";
-						config2.waveColor = "#FFDDDD";
-						config3.textVertPosition = 0.8;
-						config3.waveAnimateTime = 5000;
-						config3.waveHeight = 0.15;
-						config3.waveAnimate = false;
-						config3.waveOffset = 0.25;
-						config3.valueCountUp = false;
-						var gauge3 = loadLiquidFillGauge("fillgauge3", 28.3, config3);
+						config3.textColor = "#3ef19f";
+						config3.waveTextColor = "#3ef19f";
+						config3.waveColor = "#0bcff9";
+						config3.circleThickness = 0.15;
+        		config3.circleFillGap = 0.05;
+						config3.textVertPosition = 0.5;
+						config3.waveAnimateTime = 3000;
+						config3.waveHeight = 0.1;
+						config3.waveCount = 2;
+						config3.waveOffset = 2;
+						var gauge3 = loadLiquidFillGauge("fillgauge3", 18.1, config3);
 
-						function NewValue(){
-								if(Math.random() > .5){
-										return Math.round(Math.random()*100);
-								} else {
-										return (Math.random()*100).toFixed(1);
-								}
-						}
 					</script>
 
 			<script src="scripts/form2.js"></script>
